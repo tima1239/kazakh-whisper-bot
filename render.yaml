@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: kazakh-whisper-bot
+    env: python
+    region: frankfurt
+    plan: free
+    pythonVersion: "3.12"          # ← вот эта строчка решает всё
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      BOT_TOKEN:
+        value: 8591454671:AAFbv7OcySJWvNxEEj3XjdV01TZHfbj9nZY
